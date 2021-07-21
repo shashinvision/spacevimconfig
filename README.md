@@ -27,3 +27,30 @@ Configure Spacevim options
 Edit the .Spacevim.d/init.toml file, or use SPC f v d to open this configuration file.
 
 source: https://practical.li/clojure/clojure-editors/editor-install-guides/spacevim-fireplace.html#manual
+
+Define when configuration is called
+In the [options] section of the config bootstrap_before and bootstrap_after are strings that contain a vim method name.
+
+[options]
+    enable_guicolors = false
+    snippet_engine = "neosnippet"
+    statusline_separator = 'arrow'
+    sidebar_width = 30
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
+Create a new ~/.SpaceVim.d/autoload/myspacevim.vim and define a function
+
+function! myspacevim#before() abort
+    let g:neomake_enabled_c_makers = ['clang']
+    nnoremap jk <esc>
+endf
+function! myspacevim#after() abort
+endf
+Variables, shortcut and other vim scripts, such as customizing some autocmd, can be included.
+
+augroup MySpaceVim
+  au!
+  autocmd FileType markdown setlocal nowrap
+augroup END
+
+https://practical.li/clojure/clojure-editors/editor-install-guides/spacevim-configuration.html
