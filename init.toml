@@ -1,4 +1,3 @@
-
 #=============================================================================
 # basic.toml --- basic configuration example for SpaceVim
 # Copyright (c) 2016-2020 Wang Shidong & Contributors
@@ -29,17 +28,6 @@
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
 
-# Enable autocomplete layer
-[[layers]]
-name = 'autocomplete'
-auto_completion_return_key_behavior = "complete"
-#auto_completion_tab_key_behavior = "cycle"
-auto_completion_tab_key_behavior = "smart"
-
-#[[layers]]
-name = 'shell'
-default_position = 'top'
-default_height = 30
 
 #configuration personal
 #########################################
