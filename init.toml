@@ -1,3 +1,4 @@
+
 #=============================================================================
 # basic.toml --- basic configuration example for SpaceVim
 # Copyright (c) 2016-2020 Wang Shidong & Contributors
@@ -32,9 +33,10 @@
 [[layers]]
 name = 'autocomplete'
 auto_completion_return_key_behavior = "complete"
-auto_completion_tab_key_behavior = "cycle"
+#auto_completion_tab_key_behavior = "cycle"
+auto_completion_tab_key_behavior = "smart"
 
-[[layers]]
+#[[layers]]
 name = 'shell'
 default_position = 'top'
 default_height = 30
@@ -42,7 +44,7 @@ default_height = 30
 #configuration personal
 #########################################
 [options]
-  filetree_direction = "left"
+    filetree_direction = "left"
 
 [[layeryers]]
   name = "lang#javascript"
@@ -63,6 +65,32 @@ enable-gtm-status = true
 [[layers]]
 name = 'git'
 
+[[layers]]
+name = 'github'
+
+# File management
+[[layers]]
+name = 'fzf'
+
+#########################################
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "smart"
+
+#########################################
+# Command line
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+#########################################
+# Clojure development
+[[layers]]
+name = "lang#clojure"
+
 [[custom_plugins]]
     name = "lilydjwg/colorizer"
     merged = 0
@@ -79,4 +107,3 @@ name = 'git'
     sidebar_width = 30
     bootstrap_before = "myspacevim#before"
     bootstrap_after = "myspacevim#after"
-
