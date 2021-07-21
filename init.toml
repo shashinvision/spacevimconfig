@@ -72,3 +72,11 @@ name = 'git'
     merged = 0
     on_cmd = "Scriptnames"
 
+[options]
+    enable_guicolors = false
+    snippet_engine = "neosnippet"
+    statusline_separator = 'arrow'
+    sidebar_width = 30
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
+
