@@ -63,3 +63,12 @@ enable-gtm-status = true
 [[layers]]
 name = 'git'
 
+[[custom_plugins]]
+    name = "lilydjwg/colorizer"
+    merged = 0
+
+[[custom_plugins]]
+    name = "tpope/vim-scriptease"
+    merged = 0
+    on_cmd = "Scriptnames"
+
